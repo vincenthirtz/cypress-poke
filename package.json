@@ -2,9 +2,14 @@
   "name": "pokemon",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress": "cypress open --env deployment-env=dev",
+    "preprod-cypress": "cypress run --env deployment-env=preprod",
+    "prod-cypress": "cypress run --env deployment-env=prod"
+  },
+  "devDependencies": {
+    "cypress": "^13.7.0",
+    "dotenv": "^16.4.5"
   },
   "author": "",
   "license": "ISC"
